@@ -1,4 +1,4 @@
-import React, { Fragment, Component, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -46,7 +46,7 @@ const User = ({ getUser, getUserRepos, match, user, loading, repos }) => {
               <p>{bio}</p>
             </Fragment>
           )}
-          <a href={html_url} className="btn btn-dark my-1" target="_blank">
+          <a href={html_url} className="btn btn-dark my-1" target="_blank" rel="noopener noreferrer">
             Visit GitHub Profile
           </a>
           <ul>
@@ -68,7 +68,7 @@ const User = ({ getUser, getUserRepos, match, user, loading, repos }) => {
               {blog && (
                 <Fragment>
                   <strong>Website: </strong>
-                  <a href={blog} target="_blank">
+                  <a href={blog} target="_blank" rel="noopener noreferrer">
                     {blog}
                   </a>
                 </Fragment>
