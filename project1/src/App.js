@@ -16,7 +16,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
-  setLoading(true);
   axios
     .get(
       `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_ID}&client_secret=${
