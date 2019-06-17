@@ -7,7 +7,7 @@ import { SEARCH_USERS, SET_LOADING, CLEAR_USERS, GET_USER, GET_REPOS } from '../
 const GithubSate = props => {
   const initialState = {
     users: [],
-    users: {},
+    user: {},
     repos: [],
     loading: false
   };
@@ -27,17 +27,17 @@ const GithubSate = props => {
   const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
-    <GithubContext.provider
+    <GithubContext.Provider
       value={{
         users: state.users,
         user: state.user,
-        repo: state.repos,
+        repos: state.repos,
         loading: state.loading,
         searchUsers
       }}
     >
       {props.children}
-    </GithubContext.provider>
+    </GithubContext.Provider>
   );
 };
 
