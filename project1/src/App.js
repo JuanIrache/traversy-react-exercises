@@ -17,17 +17,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
-  axios
-    .get(
-      `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_ID}&client_secret=${
-        process.env.REACT_APP_GITHUB_CLIENT_SECRET
-      }`
-    )
-    .then(res => {
-      setUsers(res.data);
-      setLoading(false);
-    });
-
   const getUser = async username => {
     setLoading(true);
     const res = await axios.get(
