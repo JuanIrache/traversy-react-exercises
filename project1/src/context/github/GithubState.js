@@ -25,7 +25,7 @@ const GithubSate = props => {
   const searchUsers = async text => {
     setLoading();
     const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`
+      `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}`
     );
     dispatch({ type: SEARCH_USERS, payload: res.data.items });
   };
