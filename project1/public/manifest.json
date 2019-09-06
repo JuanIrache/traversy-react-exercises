@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Github Finder",
+  "name": "GitHub Finder",
   "icons": [
     {
       "src": "favicon.ico",
