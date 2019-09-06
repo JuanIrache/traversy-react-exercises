@@ -16,7 +16,6 @@ const GithubSate = props => {
 
   if (process.env.NODE_ENV !== 'production') {
     githubClientId = process.env.REACT_APP_GITHUB_ID;
-    githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
   } else {
     githubClientId = process.env.GITHUB_ID;
   }
